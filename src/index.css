@@ -12,3 +12,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.demo-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fade-out-enter-active,
+.fade-out-exit-active,
+.fade-in-enter-active,
+.fade-in-exit-active {
+  will-change: transform;
+  transition: all 500ms;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+.fade-out-enter {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.fade-out-exit-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.fade-in-enter {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.fade-in-exit-active {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
